@@ -1,0 +1,47 @@
+.settings {
+    padding: 24px;
+    text-align: center;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.settings h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+    text-shadow: var(--glow);
+}
+
+.settings p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 24px;
+}
+
+.settings button {
+    background: var(--gold-gradient);
+    color: var(--text);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings button:hover {
+    transform: scale(1.02);
+    box-shadow: var(--glow);
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .settings h1 {
+        font-size: 28px;
+    }
+}

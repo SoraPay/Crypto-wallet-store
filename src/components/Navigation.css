@@ -1,0 +1,50 @@
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px 0;
+    box-shadow: var(--glow);
+}
+
+.nav-link {
+    font-size: 24px;
+    /* Размер иконок */
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 50%;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+    box-shadow: var(--glow);
+    transform: scale(1.1);
+}
+
+.nav-link.active {
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: var(--glow);
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .navigation {
+        padding: 12px 0;
+    }
+
+    .nav-link {
+        font-size: 28px;
+        padding: 10px;
+    }
+}

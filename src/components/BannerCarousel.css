@@ -1,0 +1,50 @@
+.banner-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 16px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.banner-item {
+    flex: 0 0 300px;
+    height: 150px;
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    box-shadow: var(--glow);
+    scroll-snap-align: start;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    color: var(--text);
+}
+
+.banner-overlay h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-overlay p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray);
+    margin: 4px 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
