@@ -1,73 +1,85 @@
+/* Стили для страницы продукта */
 .product-detail {
-    padding: 24px;
+    background-color: var(--bg-main);
+    /* Белый фон #FFFFFF */
+    padding: 20px;
     text-align: center;
-    background: var(--bg);
-    color: var(--text);
 }
 
 .product-detail img {
     width: 100%;
     max-width: 300px;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    box-shadow: var(--glow);
-    margin-bottom: 16px;
+    border: 1px solid var(--bg-section);
+    /* Светло-серый #F5F5F7 */
+    margin-bottom: 15px;
 }
 
 .product-detail h1 {
-    font-size: 24px;
+    font-family: var(--font-family);
     font-weight: 700;
-    margin: 16px 0;
-    color: var(--text);
-    text-shadow: var(--glow);
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 24px;
+    margin: 0 0 10px;
 }
 
 .product-detail .price {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: var(--accent-brand);
+    /* Золотой #FACC15 */
     font-size: 20px;
-    font-weight: 700;
-    color: var(--accent);
-    margin: 8px 0;
+    margin-bottom: 10px;
+}
+
+.product-detail .stock {
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--accent-success);
+    /* Зелёный #22C55E */
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .product-detail .description {
-    font-size: 14px;
+    font-family: var(--font-family);
     font-weight: 400;
-    color: var(--gray);
-    margin: 16px 0;
+    color: var(--text-secondary);
+    /* Тёмно-серый #333333 */
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .product-detail button {
-    background: var(--gold-gradient);
-    color: var(--text);
+    background: var(--accent-primary);
+    /* Синий #1E63F0 */
+    color: #FFFFFF;
     border: none;
-    padding: 12px;
     border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-family: var(--font-family);
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .product-detail button:hover {
     transform: scale(1.02);
-    box-shadow: var(--glow);
+    opacity: 0.9;
 }
 
-/* Responsive */
-@media (min-width: 600px) {
-    .product-detail img {
-        height: 250px;
-    }
-
-    .product-detail h1 {
-        font-size: 28px;
-    }
-
-    .product-detail .price {
-        font-size: 24px;
-    }
+/* Плашка Хит/Limited */
+.product-detail .badge {
+    background: var(--accent-brand);
+    /* Золотой #FACC15 */
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }

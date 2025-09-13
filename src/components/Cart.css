@@ -1,128 +1,131 @@
+/* Стили для корзины */
 .cart {
-    padding: 24px;
+    background-color: var(--bg-main);
+    /* Белый фон #FFFFFF */
+    padding: 20px;
     text-align: center;
-    background: var(--bg);
-    color: var(--text);
 }
 
-.cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
+.cart h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 24px;
+    margin: 0 0 20px;
 }
 
+/* Элемент корзины */
 .cart-item {
     display: flex;
     align-items: center;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background-color: var(--bg-section);
+    /* Светло-серый #F5F5F7 */
     border-radius: 8px;
-    padding: 12px;
-    background: var(--bg);
-    box-shadow: var(--glow);
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
 }
 
 .cart-item img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 6px;
-    margin-right: 16px;
+    margin-right: 10px;
 }
 
-.cart-item-details {
+.cart-item .name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 16px;
     flex: 1;
     text-align: left;
 }
 
-.cart-item-details h3 {
-    font-size: 16px;
+.cart-item .price {
+    font-family: var(--font-family);
     font-weight: 500;
-    margin: 0 0 8px;
-    color: var(--text);
+    color: var(--accent-brand);
+    /* Золотой #FACC15 */
+    font-size: 14px;
+    margin-right: 10px;
 }
 
-.cart-item-details .price {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--accent);
-}
-
+/* Контроллеры количества */
 .quantity-controls {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 8px;
+    gap: 5px;
 }
 
 .quantity-controls button {
-    background: var(--gold-gradient);
-    color: var(--text);
+    background: var(--accent-primary);
+    /* Синий #1E63F0 */
+    color: #FFFFFF;
     border: none;
-    width: 32px;
-    height: 32px;
     border-radius: 4px;
-    font-size: 16px;
+    padding: 5px 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .quantity-controls button:hover {
-    transform: scale(1.05);
-    box-shadow: var(--glow);
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 .quantity-controls span {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text);
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 14px;
 }
 
-.cart-total {
-    margin-top: 24px;
-}
-
-.cart-total p {
-    font-size: 18px;
+/* Итоговая сумма */
+.cart .total {
+    font-family: var(--font-family);
     font-weight: 700;
-    color: var(--text);
-    margin-bottom: 16px;
+    color: var(--accent-brand);
+    /* Золотой #FACC15 */
+    font-size: 18px;
+    margin: 20px 0;
 }
 
-.cart-total .price {
-    color: var(--accent);
-}
-
-.cart-total button {
-    background: var(--gold-gradient);
-    color: var(--text);
+/* Кнопка оформления заказа */
+.cart .checkout-button {
+    background: var(--accent-primary);
+    /* Синий #1E63F0 */
+    color: #FFFFFF;
     border: none;
-    padding: 12px;
     border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-family: var(--font-family);
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.cart-total button:hover {
+.cart .checkout-button:hover {
     transform: scale(1.02);
-    box-shadow: var(--glow);
+    opacity: 0.9;
 }
 
-/* Responsive */
-@media (min-width: 600px) {
-    .cart-item {
-        padding: 16px;
-    }
-
-    .cart-item-details h3 {
-        font-size: 18px;
-    }
-
-    .cart-total p {
-        font-size: 20px;
-    }
+/* Сообщение об успешном оформлении */
+.cart .success-message {
+    color: var(--accent-success);
+    /* Зелёный #22C55E */
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
 }

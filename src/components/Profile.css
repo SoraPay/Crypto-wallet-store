@@ -1,47 +1,45 @@
+/* Стили для страницы профиля */
 .profile {
-    padding: 24px;
+    background-color: var(--bg-main);
+    /* Белый фон #FFFFFF */
+    padding: 20px;
     text-align: center;
-    background: var(--bg);
-    color: var(--text);
+    min-height: calc(100vh - 80px);
+    /* Учитываем навигацию */
 }
 
 .profile h1 {
-    font-size: 24px;
+    font-family: var(--font-family);
     font-weight: 700;
-    margin-bottom: 16px;
-    color: var(--text);
-    text-shadow: var(--glow);
+    color: var(--text-primary);
+    /* Чёрный #0D0D0D */
+    font-size: 24px;
+    margin: 0 0 20px;
 }
 
 .profile p {
-    font-size: 16px;
+    font-family: var(--font-family);
     font-weight: 400;
-    color: var(--gray);
-    margin-bottom: 24px;
-}
-
-.profile button {
-    background: var(--gold-gradient);
-    color: var(--text);
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
+    color: var(--text-secondary);
+    /* Тёмно-серый #333333 */
     font-size: 16px;
+    margin: 0 0 20px;
+}
+
+.profile .edit-button {
+    background: var(--accent-primary);
+    /* Синий #1E63F0 */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: var(--font-family);
     font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.profile button:hover {
+.profile .edit-button:hover {
     transform: scale(1.02);
-    box-shadow: var(--glow);
-}
-
-/* Responsive */
-@media (min-width: 600px) {
-    .profile h1 {
-        font-size: 28px;
-    }
+    opacity: 0.9;
 }

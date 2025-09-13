@@ -1,27 +1,78 @@
 :root {
-  --bg: #111111;
-  --text: #e0e0e0;
-  --accent: #d4af37;
-  --gray: #a0a0a0;
-  --gold-gradient: linear-gradient(45deg, #d4af37, #b8860b);
-  --glow: 0 0 10px rgba(212, 175, 55, 0.3);
+  --bg-main: #FFFFFF;
+  /* Белый для каталога, карточек, профиля */
+  --bg-section: #F5F5F7;
+  /* Светло-серый для блоков/секций */
+  --bg-promo: #121212;
+  /* Тёмно-серый для промо-блоков */
+  --text-primary: #0D0D0D;
+  /* Чёрный для заголовков, основного текста */
+  --text-secondary: #333333;
+  /* Тёмно-серый для описаний */
+  --accent-primary: #1E63F0;
+  /* Синий для кнопок Купить, Оформить */
+  --accent-success: #22C55E;
+  /* Зелёный для В наличии, успех */
+  --accent-brand: #FACC15;
+  /* Золотой для Хит, Limited */
+  --accent-neon: #3B82F6;
+  /* Неон-синий для баннеров/дропов */
+  --gradient-promo: linear-gradient(45deg, #0D0D0D, #3B82F6);
+  /* Градиент для новинок */
+  --font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-family);
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body.light-theme {
-  --bg: #ffffff;
-  --text: #111111;
-  --gray: #666666;
+  padding-bottom: 80px;
+  /* Для нижней навигации */
 }
 
 .app {
-  min-height: 100vh;
-  padding-bottom: 80px;
-  /* Отступ для навигации */
+  padding: 20px;
+  background-color: var(--bg-main);
+}
+
+/* Стили для адаптации под Telegram themes */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-main);
+    /* Фиксируем белый фон */
+    color: var(--text-primary);
+  }
+}
+
+/* Общие стили кнопок */
+button {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Стили заголовков */
+h1 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Второстепенный текст */
+p,
+.desc {
+  color: var(--text-secondary);
+  font-weight: 400;
 }
